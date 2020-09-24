@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.5.1.js"
+    integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+    crossorigin="anonymous"></script>
+    <script src="libs/howler.js"></script>
+    <title>Project1</title>
+</head>
+<body>
+    <div class= "canvas">
+        <div class="window">
+            <div class="container">
+              <div class="base1"></div>
+              <div class="base2"></div>
+              <div class="glass"></div>
+              <div class="pseduo-glass">
+                <div class= "lava1"></div></div>
+              <div class="pseduo-glass2">
+                <div class= "lava2"></div></div>
+              <div class="cap"></div>
+              <div class="lava3"></div>
+              <div class="lava4"></div>
+                <div class='a'onmouseover="playSound(sound1)"></div>
+                <div class='b'onmouseover="playSound(sound2)"></div>
+                <div class='c'onmouseover="playSound(sound3)"></div>
+                <div class='d'onmouseover="playSound(sound4)"></div>
+                <div class='e'onmouseover="playSound(sound5)"></div>
+                <div class='f'onmouseover="playSound(sound6)"></div>
+                <div class='g'onmouseover="playSound(sound7)"></div>
+                <div class='h'onmouseover="playSound(sound8)"></div>
+                <div class='i'onmouseover="playSound(sound9)"></div>
+                <div class='j'></div>
+                <div class='k'></div>
+                <div class='l'></div>
+                <div class='m'></div>
+                <div class='n'></div>
+                <div class='o'></div>
+                <div class='p'></div>
+                <div class='q'></div>
+                <div class='r'></div>
+                <div class='s'></div>
+                <div class='t'></div>
+                
+        </div>
+        </div>
+        </div>
+           
+</body>
+<style>
+
+@keyframes lavaflowA {
+    0% {transform: skewX(20deg)}
+    100% {transform: skewY(-20deg)}
+}
+
+.container {
+  position: relative;
+  margin: auto;
+  display: block;
+  margin-top: 5%;
+  width: 600px;
+  height: 600px;
+}
+
+.window {
+    background-image: linear-gradient(to bottom, orange, #52002e);
+    position: absolute;
+    left: 50px;
+    top: 50px;
+    width: 500px;
+    height: 500px;
+}
+  
+  .base1 {
+    width: 0;
+    height: 0;
+    border-top: 200px solid black;
+    border-left: 85px solid transparent;
+    border-right: 85px solid transparent;
+    position: absolute;
+    left: 35%;
+    bottom: 3%;
+}
+
+.base2 {
+    width: 0;
+    height: 0;
+    border-top: 200px solid transparent;
+    border-left: 85px solid transparent;
+    border-right: 85px solid transparent;
+    border-bottom: 52px solid black;
+    position: absolute;
+    left: 35%;
+    bottom: 3%;
+}
+
+.glass {
+    background-image: blue;
+    opacity: 40%;
+    width: 10px;
+    height: 0;
+    border-top: 200px solid transparent;
+    border-left: 80px solid transparent;
+    border-right: 80px solid transparent;
+    border-bottom: 360px Solid #bfd5de;
+    position: absolute;
+    left: 35%;
+    bottom: 36.3%;
+}
+
+.cap {
+    background-image: blue;
+    width: 18px;
+    height: 0px;
+    border-top: 200px solid transparent;
+    border-left: 22px solid transparent;
+    border-right: 22px solid transparent;
+    border-bottom: 110px Solid black;
+    position: absolute;
+    left: 44%;
+    bottom: 78%;
+}
+
+.pseduo-glass {
+    background-color: transparent;
+    width: 50%;
+    height: 50%;
+    position: relative;
+    left: 238.8px;
+    bottom: -116px;
+    overflow: hidden;
+    transform: rotate(12deg);
+}
+
+.lava1 {
+    background-image: linear-gradient(to top, #7ee5f7, #52002e);
+    width: 100px;
+    height: 40px;
+    position: relative;
+    left: -50px;
+    bottom: -166px;
+    border-radius: 50%;
+    transform: rotate(-12deg);
+    animation-name: lavaflowA;
+    animation-duration: 2s;
+    animation-duration: reverse;
+  
+}
+
+.pseduo-glass2 {
+   background-color: transparent;
+    width: 50%;
+    height: 50%;
+    position: relative;
+    left: 51.3px;
+    bottom: 182px;
+    overflow: hidden;
+    transform: rotate(-12.6deg);
+}
+
+.lava2 {
+    background-image: linear-gradient(to top, #7ee5f7, #52002e);
+    width: 120px;
+    height: 80px;;
+    position: relative;
+    left: 200px;
+    bottom: -192px;
+    border-radius: 50%;
+    transform: rotate(12deg);
+ }
+
+.lava3 {
+    background-image: linear-gradient(to top, #7ee5f7, #52002e);
+    position: absolute;
+    bottom: 330px;
+    left: 286px;
+    width: 40px;
+    height: 60px;
+    border-radius: 50% 50% 50% 50% / 60% 60%     40% 40%;
+}
+
+.lava4 {
+   background-image: linear-gradient(to top, #7ee5f7, #52002e);
+    width: 20px;
+    height: 20px;
+    position: relative;
+    left: 260px;
+    bottom: 400px;
+    border-radius: 50%;
+  }
+
+.canvas {
+    background-image: linear-gradient(to bottom, black, #061f40);
+    width: 100vw;
+    height: 100vh;
+}
+
+body {
+    margin: 0 0;
+}
+
+
+div.a {
+width: 150px;
+height:150px;
+ /*background-color:purple;*/
+ background-color: transparent;
+position:fixed;
+    
+}
+div.b {
+width: 150px;
+height:150px;
+ /*background-color:red;*/
+ background-color: transparent;
+position:fixed;
+    
+}
+div.c {
+width: 150px;
+height:150px;
+ /*background-color:orangered;*/
+ background-color: transparent;
+position:fixed;
+    
+}
+div.d {
+width: 150px;
+height:150px;
+ /*background-color:navajowhite;*/
+ background-color: transparent;
+position:fixed;
+    
+}
+div.e {
+width: 150px;
+height:150px;
+ /*background-color:paleturquoise;*/
+ background-color: transparent;
+position:fixed;
+    
+}
+div.f {
+width: 150px;
+height:150px;
+ /*background-color:orange;*/
+ background-color: transparent;
+position:fixed;
+    
+}
+div.g {
+width: 150px;
+height:150px;
+ /*background-color:teal;*/
+ background-color: transparent;
+position:fixed;
+    
+}
+div.h {
+width: 150px;
+height:150px;
+ /*background-color:green;*/
+ background-color: transparent;
+position:fixed;
+    
+}
+div.i {
+width: 120px;
+height:120px;
+ /*background-color:slategray;*/
+ background-color: transparent;
+position:fixed;
+    
+}
+div.j {
+width: 120px;
+height:120px;
+ /*background-color:blue;*/
+ background-color: transparent;
+position:fixed;
+    
+}
+div.k {
+width: 120px;
+height:120px;
+ /*background-color:blue;*/
+ background-color: transparent;
+position:fixed;
+    
+}
+div.k {
+width: 120px;
+height:120px;
+ /*background-color:blue;*/
+ background-color: transparent;
+position:fixed;
+    
+}
+div.l {
+width: 120px;
+height:120px;
+ /*background-color:blue;*/
+ background-color: transparent;
+position:fixed;
+    
+}
+div.m {
+width: 120px;
+height:120px;
+ /*background-color:blue;*/
+ background-color: transparent;
+position:fixed;
+    
+}
+div.n {
+width: 120px;
+height:120px;
+ /*background-color:blue;*/
+ background-color: transparent;
+position:fixed;
+    
+}
+div.o {
+width: 120px;
+height:120px;
+ /*background-color:blue;*/
+ background-color: transparent;
+position:fixed;
+    
+}
+div.p {
+width: 120px;
+height:120px;
+ /*background-color:blue;*/
+ background-color: transparent;
+position:fixed;
+    
+}
+div.q {
+width: 120px;
+height:120px;
+ /*background-color:blue;*/
+ background-color: transparent;
+position:fixed;
+    
+}
+div.r {
+width: 120px;
+height:120px;
+ /*background-color:blue;*/
+ background-color: transparent;
+position:fixed;
+    
+}
+div.s {
+width: 120px;
+height:120px;
+ /*background-color:blue;*/
+ background-color: transparent;
+position:fixed;
+    
+}
+div.t {
+width: 120px;
+height:120px;
+ /*background-color:blue;*/
+ background-color: transparent;
+position:fixed;
+    
+}
+
+
+</style>
+
+<script>
+    
+
+const sound1 = new Howl({ src: 'sounds/Proj1_Track1.mp3' });
+console.log(sound1);
+const sound2 = new Howl({ src: 'sounds/Proj1_Track2.mp3' });
+console.log(sound2);
+const sound3 = new Howl({ src: 'sounds/Proj1_Track3.mp3' });
+console.log(sound3);
+const sound4 = new Howl({ src: 'sounds/Proj1_Track4.mp3' });
+console.log(sound4);
+const sound5 = new Howl({ src: 'sounds/Proj1_Track5.mp3' });
+console.log(sound5);
+const sound6 = new Howl({ src: 'sounds/Proj1_Track6.mp3'});
+console.log(sound6);
+const sound7 = new Howl({ src: 'sounds/Proj1_Track7.mp3'});
+console.log(sound7);
+const sound8 = new Howl({ src: 'sounds/Proj1_Track8.mp3'});
+console.log(sound8);
+const sound9 = new Howl({ src: 'sounds/Proj1_Track9.mp3'});
+console.log(sound9);
+
+const playSound = (sound) => {
+    sound.play();
+}
+
+    $(document).ready(function(){
+    animateDiv('.a');
+    animateDiv('.b');
+    animateDiv('.c');
+    animateDiv('.d');
+    animateDiv('.e');
+    animateDiv('.f');
+    animateDiv('.g');
+    animateDiv('.h');
+    animateDiv('.i');
+    animateDiv('.j');
+    animateDiv('.k');
+    animateDiv('.l');
+    animateDiv('.m');
+    animateDiv('.n');
+    animateDiv('.o');
+    animateDiv('.p');
+    animateDiv('.q');
+    animateDiv('.r');
+    animateDiv('.s');
+    animateDiv('.t');
+
+    
+
+    /*animateDiv2('.lava1');
+    animateDiv2('.lava2');
+    animateDiv2('.lava3');
+    animateDiv2('.lava4');*/
+});
+
+
+window.onload(function(){
+    animateDiv('.a');
+    animateDiv('.b');
+    animateDiv('.c');
+    animateDiv('.d');
+    animateDiv('.e');
+    animateDiv('.f');
+    animateDiv('.g');
+    animateDiv('.h');
+    animateDiv('.i');
+    animateDiv('.j');
+    animateDiv('.k');
+    animateDiv('.l');
+    animateDiv('.m');
+    animateDiv('.n');
+    animateDiv('.o');
+    animateDiv('.p');
+    animateDiv('.q');
+    animateDiv('.r');
+    animateDiv('.s');
+    animateDiv('.t');
+
+
+
+});
+
+function makeNewPosition(){
+    
+    // Get viewport dimensions (remove the dimension of the div)
+    var h = $(window).height() - 50;
+    var w = $(window).width() - 50;
+    
+    var nh = Math.floor(Math.random() * h);
+    var nw = Math.floor(Math.random() * w);
+    
+    return [nh,nw];    
+    
+}
+
+
+function makeNewPosition2(){
+    
+    // Get viewport dimensions (remove the dimension of the div)
+    // var h = $(window).height() - 50;
+    const h = 400;
+    // var w = $(window).width() - 50;
+    const w = 400;
+    
+    var nh = Math.floor(Math.random() * h) + 200 ;
+    var nw = Math.floor(Math.random() * w) + 200;
+    nh = 300;
+    nw = 300;
+    
+    return [nh,nw];    
+    
+}
+
+function animateDiv(myclass){
+    var newq = makeNewPosition();
+    $(myclass).animate({ top: newq[0], left: newq[1] }, 2000,   function(){
+      animateDiv(myclass);        
+    });   
+};
+
+
+/*function animateDiv2(myclass){
+    let newQ = makeNewPosition2();
+    let othernewq = [300,300];
+    $(myclass).animate({ top: newQ[0], left: newQ[1] }, 4000,   function(){
+      animateDiv2(myclass);        
+    });   
+}*/
+
+</script>
+</html>
